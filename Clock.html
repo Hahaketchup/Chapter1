@@ -8,8 +8,31 @@
 
 </head>
 	<body>
-		<div id="time"></div>
-		<div id="date"></div>
+		<div id="clock-display">
+			<span id="time-display">
+				<span id="hours"></span>:
+				<span id="minutes"></span>:
+				<span id="seconds"></span>
+				<span id="am-pm">	
+			</span>
+		</div>
+		<span id="date"></span>
+
+		
+
+<!-- previous html code -->
+<!-- 		<label class="hourswitch">
+			<input type="checkbox" id="toggle">
+			<span class="slider round"></span>
+		</label>
+ -->
+<div class="timeswitch">
+    <input type="checkbox" name="timeswitch" class="timeswitch-checkbox" id="mytimeswitch" checked>
+    <label class="timeswitch-label" for="mytimeswitch">
+        <span class="timeswitch-inner"></span>
+        <span class="timeswitch-switch"></span>
+    </label>
+</div>
 	</body>
 
 <script src="Clock.js"></script>
