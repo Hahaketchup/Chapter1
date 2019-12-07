@@ -1,48 +1,54 @@
+/*This takes care of the background and the surface level items. Formats the basic info.*/
 body {
-	padding-top: 250px;
-	background-color: #1c1c1c;
-	font-family: 'Orbitron', sans-serif;
-	text-align: center;
-	font-family
+	padding-top: 250px; /*sets a padding at the top of the body, moves the entire clock down by 250px*/
+	background-color: #1c1c1c; /*sets the background color to gray*/
+	font-family: 'Orbitron', sans-serif; /*uses the font based from google fonts*/
+	text-align: center; /*aligns the text to the center of the page*/
 }
 
+/*This edits the entirety of the entire clock display area. Covers both the time, time of day, and date*/
 #clock-display {
-	color: #E520BE;
-	font-size: 100px;
-	text-align: center;
+	color: #E520BE; /*sets the color of the font to that pinkish color*/
+	font-size: 100px; /*sets the size of the font to 100px*/
+	margin: auto; /**/
 }
 
+/*distinctly changes things within the whole part of the */
 #time-display {
 	padding: 25px;
 	text-shadow: 6px 0px 10px black;
 }
 
+/*changes the "hours" span*/
 #hours {
-	min-width: 115px;
-	text-align: center;
+	width: 150px;
+	display: inline-block;
 	margin: auto;
 }
 
+/*changes the "minutes span*/
 #minutes {
-	min-width: 115px;
-	text-align: center;
+	width: 190px;
+	display: inline-block;
 	margin: auto;
+	margin-right: 5px;
 }
 
+/*changes the "seconds" span*/
 #seconds {
-	min-width: 115px;
-	text-align: center;
+	width: 175px;
+	display: inline-block;
 	margin: auto;
 }
 
+/*changes the "AM/PM" span*/
 #am-pm {
-
 	text-shadow: 6px 0px 10px black;
 }
 
+/*changes the date span*/
 #date {
-
-	margin-top: 50px;
+	margin: auto;
 	color: #E520BE;
 	font-size: 30px;
 	text-align: center;
@@ -113,49 +119,93 @@ border-radius: 34px;
 
 }*/
 
+
+/**/
 .timeswitch {
-    position: relative; width: 120px; margin-left: 900px;
+	padding-top: 20px;
+    position: relative; 
+    width: 120px; 
+    margin: auto;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
+
+/**/
 .timeswitch-checkbox {
     display: none;
 }
+
+/**/
 .timeswitch-label {
-    display: block; overflow: hidden; cursor: pointer;
-    border: 2px solid #E520BE; border-radius: 20px;
+    display: block; 
+    overflow: hidden; 
+    cursor: pointer;
+    border: 2px solid #E520BE; 
+    border-radius: 20px;
 }
+
+/**/
 .timeswitch-inner {
-    display: block; width: 200%; margin-left: -100%;
+    display: block; 
+    width: 200%; 
+    margin-left: -100%;
     transition: margin 0.3s ease-in 0s;
 }
+
+/**/
 .timeswitch-inner:before, .timeswitch-inner:after {
-    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
-    font-size: 14px; color: white; font-family: 'Orbitron', sans-serif; /*font-weight: bold;*/
+    display: block; 
+    float: left; 
+    width: 50%; 
+    height: 30px; 
+    padding: 0; 
+    line-height: 30px;
+    font-size: 14px; 
+    color: white; 
+    font-family: 'Orbitron', sans-serif; /*font-weight: bold;*/
     box-sizing: border-box;
 }
+
+/**/
 .timeswitch-inner:before {
     content: "24 Hour";
     padding-left: 10px;
-    background-color: #E084CE; color: #FFFFFF;
+    background-color: #E084CE; 
+    color: #FFFFFF;
     text-align: left;
 }
+
+/**/
 .timeswitch-inner:after {
     content: "12 Hour";
     padding-right: 10px;
-    background-color: #EEEEEE; color: #E520BE;
+    background-color: #EEEEEE; 
+    color: #E520BE;
     text-align: right;
 }
+
+/**/
 .timeswitch-switch {
-    display: block; width: 20px; margin: 5px;
+	transform: translateY(20px);
+    display: block; 
+    height: 20px;
+    width: 20px; 
+    margin: 5px;
     background: #FFFFFF;
-    position: absolute; top: 0; bottom: 0;
+    position: absolute; 
+    top: 0; 
+    bottom: 0;
     right: 86px;
-    border: 2px solid #E520BE; border-radius: 20px;
+    border: 2px solid #E520BE; 
+    border-radius: 20px;
     transition: all 0.3s ease-in 0s; 
 }
+
+/**/
 .timeswitch-checkbox:checked + .timeswitch-label .timeswitch-inner {
     margin-left: 0;
 }
+
+/**/
 .timeswitch-checkbox:checked + .timeswitch-label .timeswitch-switch {
     right: 0px; 
 }
