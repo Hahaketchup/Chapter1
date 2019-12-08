@@ -39,21 +39,18 @@ function clock() {
 	militaryHours = d.getHours(); //assigns the military hours as the actual value
 	hour = ( hour == 0 ) ? 12 : hour; //allows the hour to be displayed as 12 rather than 0
 
-/*	twelveHour = hour+" : "+minute+" : "+second+" "+timeOfDay; //gives the value to be displayed in a 12 hour clock
-	twentyfourHour = militaryHours+" : "+minute+" : "+second+" "+timeOfDay; //gives the value to be displayed in a 24 hour clock
-*/
+
 	// now we're formatting and assigning the time
-	document.getElementById("date").innerHTML=day+", "+month+" "+date+" "+year; //displays the date correctly
+	document.getElementById("date").innerHTML = day+", "+month+" "+date+" "+year; //displays the date correctly
 
 	if (isMilitaryTime === false) {
-		document.getElementById("hours").innerHTML=hour; //if the military toggle isn't selected, it displays the time per 12 hours
+		document.getElementById("hours").innerHTML = hour; //if the military toggle isn't selected, it displays the time per 12 hours
 	} else {
-		document.getElementById("hours").innerHTML=militaryHours; //if the military toggle is selected, it displays the time per 24 hours
+		document.getElementById("hours").innerHTML = militaryHours; //if the military toggle is selected, it displays the time per 24 hours
 	}
-	document.getElementById("minutes").innerHTML=minute;
-	document.getElementById("seconds").innerHTML=second;
-	document.getElementById("am-pm").innerHTML=timeOfDay;
-
+	document.getElementById("minutes").innerHTML = minute; //displays minutes on the page
+	document.getElementById("seconds").innerHTML = second; //displays displays seconds on the page
+	document.getElementById("am-pm").innerHTML = timeOfDay; //displays either AM or PM
 }
 	
 	let isMilitaryTime = true;
@@ -64,5 +61,4 @@ function clock() {
 		else if (isMilitaryTime === true) {
 			isMilitaryTime = false; //the opposite of the above statement
 		}
-	
 	})

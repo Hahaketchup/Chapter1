@@ -21,7 +21,7 @@ body {
 
 /*changes the "hours" span*/
 #hours {
-	width: 150px;
+	width: 190px;
 	display: inline-block;
 	margin: auto;
 }
@@ -54,7 +54,7 @@ body {
 	text-align: center;
 	text-shadow: 6px 0px 10px black;
 }
-/*previous css below*/
+/*previous, more basic css below*/
 
 
 /*.hourswitch {
@@ -120,92 +120,90 @@ border-radius: 34px;
 }*/
 
 
-/**/
+/*the general switch to change between 12/24 hour time*/
 .timeswitch {
-	padding-top: 20px;
-    position: relative; 
-    width: 120px; 
-    margin: auto;
-    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+	padding-top: 20px; /*puts a 20px buffer zone above*/
+    position: relative; /*allows the white circle object or timeswitch-switch to stay within the parent(this one)*/
+    width: 120px; /*sets the width of toggle box*/
+    margin: auto; /*sets the toggle box to remain at the center of the screen*/
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;/*makes it so the toggle can't be selected*/
 }
 
-/**/
+/*edits the checkbox*/
 .timeswitch-checkbox {
-    display: none;
+    display: none; /*keeps the function of the checkbox, but allows it to be edited to turn it into the toggle*/
 }
 
-/**/
+/*designates the outer portion of the timeswitch*/
 .timeswitch-label {
-    display: block; 
-    overflow: hidden; 
-    cursor: pointer;
-    border: 2px solid #E520BE; 
-    border-radius: 20px;
+    display: inline-block; /*allows for height and width formatting, but also allows the items to stay within the same line for formatting*/
+    overflow: hidden; /*allows part of the toggle to be hidden behind the background when it isn't being shown*/
+    cursor: pointer; /*when hovered over it indicates a link is there for something to do*/
+    border: 2px solid #E520BE; /*gives a pinkish border of 2px*/
+    border-radius: 20px; /*makes the border rounded*/
 }
 
-/**/
+/*designates the inner portion of the timeswitch*/
 .timeswitch-inner {
-    display: block; 
-    width: 200%; 
-    margin-left: -100%;
-    transition: margin 0.3s ease-in 0s;
+    display: block; /*keeps the items on one line but allows for height and width formatting*/
+    width: 200%; /*doubles the width of the overall item*/
+    margin-left: -100%; /*sets to display the left half of the item*/
+    transition: margin 0.3s ease-in 0s; /*the animation when clicked. the margin smoothly changes over instantly starts to move over the course of .3 seconds */
 }
 
-/**/
+/*Separates between the left and right half of the inner portion*/
 .timeswitch-inner:before, .timeswitch-inner:after {
-    display: block; 
-    float: left; 
-    width: 50%; 
-    height: 30px; 
-    padding: 0; 
-    line-height: 30px;
-    font-size: 14px; 
-    color: white; 
-    font-family: 'Orbitron', sans-serif; /*font-weight: bold;*/
-    box-sizing: border-box;
+    display: block; /*forces everything in here to be on one line and allows for height and width formatting*/
+    float: left; /*sets the display to start showing the left half*/
+    width: 50%; /*since the display is supposed to be set as a half, if the width is 100% it will show essentially doubled. This allows it to show exactly half based on the click*/
+    height: 30px; /*sets the height of the inner part*/
+    padding: 0; /*this keeps the padding to be the default value. This way it displays the text inside correctly*/
+    line-height: 30px; /*changes the spacing in between lines. A higher value will push it down to try to keep the spacing in the lines proportionate.*/
+    font-size: 14px; /*sets the font size*/
+    font-family: 'Orbitron', sans-serif; /*uh.. the font*/
+    box-sizing: border-box; /*makes the elements inside the box to share the boxes format*/
 }
 
-/**/
+/*shows what is on the left side of the label*/
 .timeswitch-inner:before {
-    content: "24 Hour";
-    padding-left: 10px;
-    background-color: #E084CE; 
-    color: #FFFFFF;
-    text-align: left;
+    content: "24 Hour"; /*displays the text*/
+    padding-left: 10px; /*makes it so the text isn't hugging the far left*/
+    background-color: #E084CE; /*sets the background text to be light pinkish*/
+    color: #FFFFFF; /*sets the text to be white*/
+    text-align: left; /*sets the text to the left*/
 }
 
-/**/
+/*shows what is on the right side of the label*/
 .timeswitch-inner:after {
-    content: "12 Hour";
-    padding-right: 10px;
-    background-color: #EEEEEE; 
-    color: #E520BE;
-    text-align: right;
+    content: "12 Hour"; /*displays the text*/
+    padding-right: 10px; /*makes sure the text doesn't hug the right hand side*/
+    background-color: #EEEEEE; /*sets the background text to be an off white*/
+    color: #E520BE; /*sets the text to be pinkish */
+    text-align: right; /*sets the text to the right*/
 }
 
-/**/
+/*the little white circle*/
 .timeswitch-switch {
-	transform: translateY(20px);
-    display: block; 
-    height: 20px;
-    width: 20px; 
-    margin: 5px;
-    background: #FFFFFF;
-    position: absolute; 
-    top: 0; 
-    bottom: 0;
-    right: 86px;
-    border: 2px solid #E520BE; 
-    border-radius: 20px;
-    transition: all 0.3s ease-in 0s; 
+	transform: translateY(20px); /*shifts the circle down to match the height*/
+    display: block; /*like the others allows height and width formatting*/
+    height: 20px; /*shifts the entire height of the circle*/
+    width: 20px; /*shifts the entire width of the cirlce*/ 
+    margin: 5px; /*sets the margin for all four sides*/
+    background: #FFFFFF; /*sets the color to be white*/
+    position: absolute; /*sets the position to be in proportion of the previous position*/
+    top: 0; /*needs position to work. Places the element at the top most edge*/
+    right: 86px; /*Not too sure actually. Removing this causes the animation to be very jumpy*/
+    border: 2px solid #E520BE; /*creates the border around the circle*/
+    border-radius: 20px; /*causes it to be a circle*/
+    transition: all 0.3s ease-in 0s; /*same as stated before, allows the animation when clicked*/
 }
 
-/**/
+/*makes the toggle checked and tells the label and the inner part what to do when it is checked*/
 .timeswitch-checkbox:checked + .timeswitch-label .timeswitch-inner {
-    margin-left: 0;
+    margin-left: 0; /*when checked tells the margin to be at default*/
 }
 
-/**/
+/*when the toggle is checked it allows the animation and tells the label and white circle what to do*/
 .timeswitch-checkbox:checked + .timeswitch-label .timeswitch-switch {
-    right: 0px; 
-}
+    right: 0px; /*shifts the label and white circle to be as far right as possible*/
+}*/
