@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="Clock.css">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+
+	<title>Clock</title>
+
+</head>
+	<body>
+		<div id="clock-display">
+			<span id="time-display">
+				<span id="hours"></span>:
+				<span id="minutes"></span>:
+				<span id="seconds"></span>
+			</span>	
+				<span id="am-pm">	
+			</span>
+		</div>
+		<span id="date"></span>
+
+<!-- previous, more basic html code -->
+<!-- 		<label class="hourswitch">
+			<input type="checkbox" id="toggle">
+			<span class="slider round"></span>
+		</label>
+ -->
+
+<div class="timeswitch">
+    <input type="checkbox" name="timeswitch" class="timeswitch-checkbox" id="mytimeswitch" checked>
+    <label class="timeswitch-label" for="mytimeswitch">
+        <span class="timeswitch-inner"></span>
+        <span class="timeswitch-switch"></span>
+    </label>
+</div>
+	</body>
+
+<script src="Clock.js"></script>
+
+</html>
