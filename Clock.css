@@ -206,4 +206,4 @@ border-radius: 34px;
 /*when the toggle is checked it allows the animation and tells the label and white circle what to do*/
 .timeswitch-checkbox:checked + .timeswitch-label .timeswitch-switch {
     right: 0px; /*shifts the label and white circle to be as far right as possible*/
-}*/
+}

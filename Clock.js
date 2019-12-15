@@ -19,7 +19,7 @@ function clock() {
 	var realday =["Sunday" , "Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" , "Saturday"]; //allows a list to give the current day
 	day = realday[day] //actually assigns the correct day
 
-	//it's clock time now
+	// it's clock time now
 	var hour = d.getHours(); //gets current hour info
 	var minute = d.getMinutes(); //gets current minute info
 	var second = d.getSeconds(); //gets current second info
