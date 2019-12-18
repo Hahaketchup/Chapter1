@@ -10,7 +10,7 @@ View it in action [here](https://hahaketchup.github.io/Clock-App/)
 
 <br>
 
-<image src="images/Clock.png">
+<image src="Pictures/Clock.png">
 
 ## Summary
 
