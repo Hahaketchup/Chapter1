@@ -6,6 +6,8 @@ _A basic clock app with minor stylization using only Javascript, HTML and CSS_
 
 <br>
 
+With a working 12/24 hour toggle switch it accurately tells the current time.
+
 View it in action [here](https://hahaketchup.github.io/Clock-App/)
 
 <br>
